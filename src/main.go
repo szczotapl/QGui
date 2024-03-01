@@ -1,17 +1,19 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"log"
 	"os"
 	"os/exec"
 
+	"fyne.io/fyne"
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/container/layout"
 	"fyne.io/fyne/v2/container/tab"
-	"fyne.io/fyne/v2/dialog"
 	"fyne.io/fyne/v2/container/widget"
+	"fyne.io/fyne/v2/dialog"
 )
 
 var isoPath string
@@ -19,7 +21,7 @@ var ramSize string
 
 func main() {
 	myApp := app.New()
-	myWindow := myApp.NewWindow("QEMU GUI")
+	myWindow := myApp.NewWindow("QGUI")
 
 	basicTabContent := container.NewVBox(
 		widget.NewLabel("Basic Configuration"),
